@@ -1,8 +1,8 @@
-# Hardhat / Foundry Artifacts
-contracts/artifacts/
-contracts/cache/node_modules/
-.next/
+# Dependencies
+node_modules/
+
+# Hardhat artifacts and cache
+cache/.next/
 dist/
 build/
 *.log
-node_modules/

@@ -379,6 +379,45 @@
       "artifacts": [
         "AccessManager"
       ]
+    },
+    "/workspace/contracts/contracts/AssetRegistry.sol": {
+      "lastModificationDate": 1790875677473,
+      "contentHash": "0fc4f79ba94a79370665eb5feadb811c",
+      "sourceName": "contracts/AssetRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/IAccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "AssetRegistry",
+        "IAccessManager"
+      ]
     }
   }
 }
