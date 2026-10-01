@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Hardhat artifacts and cache
+cache/.next/
+dist/
+build/
+*.log
+.next/
