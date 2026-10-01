@@ -16,10 +16,12 @@ Legend: [ ] pending | [~] in progress | [x] done + tested + committed
 - [x] P0.5 Docs: README, ARCHITECTURE, this TODO; git committed
 - [x] P0.6 Test report for Phase 0 delivered and approved
 
-## Feature 1 — Application UI (mock data)
-- [ ] F1.1 Dashboard shell: nav for Identities, Assets, Roles, Audit Logs, Verification, Settings
-- [ ] F1.2 Pages with mock data + types/models shared with backend
-- [ ] F1.3 Build passes (`next build`) + smoke test report
+## Feature 1 — Application UI (mock data)  ✅ COMPLETE (commit: feat(F1): application UI shell)
+- [x] F1.1 Dashboard shell: sidebar + header, responsive, nav for Identities, Assets, Roles, Audit Logs, Verification, Settings
+- [x] F1.2 Pages with mock data + shared domain types (`src/types/models.ts`); routes /, /login, /dashboard, /identities, /assets, /roles, /audit, /verify, /settings
+- [x] F1.3 Reusable components: Card, StatCard, Badge (+ status tone util), DataTable, PageHeader
+- [x] F1.4 Verification: lint 0 errors, tsc clean, production build OK, all 9 routes serve 200, no Phase-0 regressions (contracts 5/5, api 4/4)
+- Note: stack deviation — Vite+React+TS+react-router instead of Next.js (offline environment cannot reliably scaffold Next; same component model, easy to port). Wallet/auth buttons are disabled placeholders by design (F2 scope).
 
 ## Feature 2 — Wallet Authentication
 - [ ] F2.1 Connect/disconnect wallet, account + network detection (MetaMask via window.ethereum / wagmi or ethers)

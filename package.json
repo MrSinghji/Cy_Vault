@@ -5,6 +5,10 @@
   "description": "Decentralized Identity, RBAC & NFT Asset Ownership Platform (monorepo root)",
   "scripts": {
     "test": "npm --prefix contracts test",
-    "compile": "npm --prefix contracts compile"
+    "compile": "npm --prefix contracts compile",
+    "web:dev": "npm --prefix apps/web dev",
+    "web:build": "npm --prefix apps/web build",
+    "web:test": "npm --prefix apps/web run lint && npm --prefix apps/web exec tsc -- -b --noEmit",
+    "api:test": "npm --prefix apps/api test"
   }
 }
