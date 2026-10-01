@@ -168,3 +168,10 @@ button { font: inherit; cursor: pointer; }
   .network-pill { display: none; }
   .content { padding: 16px; }
 }
+
+/* F2 — wallet connection UI */
+.wallet-cluster { display: flex; align-items: center; gap: 10px; }
+.wallet-address { font-size: 13px; color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; background: rgba(255,255,255,.03); }
+.wallet-error { font-size: 12px; color: #ff7a7a; max-width: 260px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+@media (max-width: 720px) { .wallet-address { display: none; } }

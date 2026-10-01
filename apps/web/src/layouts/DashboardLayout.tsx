@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import WalletButton from '../components/WalletButton';
 
 const NAV_ITEMS = [
   { to: '/dashboard', label: 'Dashboard', icon: '▦' },
@@ -55,14 +56,9 @@ export default function DashboardLayout() {
           >
             ☰
           </button>
-          <span className="network-pill" title="Network detection arrives in Feature 2">
-            Network: <strong>Localhost (31337)</strong>
-          </span>
+          {/* F2: live network pill moved into WalletButton (shown when connected). */}
           <div className="topbar-right">
-            {/* Wallet connect/disconnect is Feature 2 — placeholder button only. */}
-            <button className="btn btn-outline" disabled title="Wallet connection arrives in Feature 2">
-              Connect Wallet
-            </button>
+            <WalletButton />
             <span className="avatar" aria-hidden="true">
               A
             </span>

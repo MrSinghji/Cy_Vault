@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
+import WalletButton from '../components/WalletButton';
 
-/** Placeholder login screen. Real wallet-signature authentication is Feature 2. */
+/** Login screen. F2 step 1: real wallet connect/disconnect works here; signature login (nonce → personal_sign → server verify) lands in F2.2. */
 export default function Login() {
   return (
     <div className="login-page">
       <div className="login-card card">
         <h1 className="page-title">Sign in with your wallet</h1>
         <p className="page-description">
-          Cryptographic login (nonce → EIP-4361 signature → server verification) will be wired
-          here in <strong>Feature 2 — Wallet Authentication</strong>.
+          Connect your browser wallet below. Cryptographic login (nonce → EIP-4361/personal_sign →
+          server verification) will be wired on top of this connection in{' '}
+          <strong>F2.2</strong>.
         </p>
-        <button className="btn btn-primary" disabled>
-          🔗 Connect Wallet &amp; Sign In
-        </button>
+        <WalletButton />
         <Link className="btn btn-outline" to="/dashboard">
           Continue with mock data →
         </Link>
-        <p className="home-note">No wallet or auth logic exists yet — by design (F1 scope).</p>
+        <p className="home-note">Connection state is shared app-wide via the useWallet hook.</p>
       </div>
     </div>
   );

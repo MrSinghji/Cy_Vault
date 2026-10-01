@@ -24,7 +24,7 @@ Legend: [ ] pending | [~] in progress | [x] done + tested + committed
 - Stack note: frontend is **Vite + React + TypeScript + React Router** (offline environment could not reliably scaffold Next.js; same component model). This is the project's canonical frontend stack. Wallet/auth buttons are disabled placeholders by design (F2 scope).
 
 ## Feature 2 — Wallet Authentication
-- [ ] F2.1 Connect/disconnect wallet, account + network detection (MetaMask via window.ethereum / wagmi or ethers)
+- [x] F2.1 Connect/disconnect wallet, account + network detection (MetaMask via window.ethereum / wagmi or ethers) — **DONE this step** (`src/wallet/eip1193.ts`, `src/wallet/connect.ts`, `src/wallet/useWallet.ts`, `components/WalletButton.tsx`; wired into topbar, Login and Settings; viem used for chainId decoding; 15 unit tests green)
 - [ ] F2.2 SIWE-style cryptographic login: nonce -> EIP-4361/personal_sign -> verify signature server-side -> session
 - [ ] F2.3 Tests: signature verification unit tests, replay/invalid-signature rejection
 
