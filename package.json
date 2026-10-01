@@ -1,0 +1,10 @@
+{
+  "name": "did-rbac-nft-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Decentralized Identity, RBAC & NFT Asset Ownership Platform (monorepo root)",
+  "scripts": {
+    "test": "npm --prefix contracts test",
+    "compile": "npm --prefix contracts compile"
+  }
+}
