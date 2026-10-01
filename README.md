@@ -8,7 +8,7 @@ an indexer into a SQL database, and independent verification of assets and owner
 ```
 contracts/     Hardhat project: Solidity contracts, tests, deploy scripts (Phase 0+)
 apps/api/      Node.js + TypeScript backend: auth, identity, asset, RBAC, verification, indexer
-apps/web/      Next.js + React + TypeScript + Tailwind frontend
+apps/web/      Vite + React + TypeScript + React Router frontend (dashboard shell, mock data)
 docs/          Architecture notes and flows
 TODO.md        Master feature checklist (one-feature-at-a-time workflow)
 ```
@@ -18,7 +18,7 @@ For every feature: implement only that feature -> compile -> automated tests -> 
 report -> git commit -> next feature. See `TODO.md` for the full plan and status tracking.
 
 ## Stack
-- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Frontend: Vite, React, TypeScript, React Router (custom CSS design tokens; scaffolded under `apps/web/`)
 - Wallet: MetaMask / EIP-1193 provider
 - Contracts: Solidity + OpenZeppelin, Hardhat (local EVM for dev/test; EVM testnet for final deployment)
 - Blockchain client: ethers/viem

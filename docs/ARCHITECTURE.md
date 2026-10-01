@@ -10,7 +10,7 @@ USER -> CONNECT WALLET -> CRYPTOGRAPHIC LOGIN -> IDENTITY REGISTRY -> RESOLVE RO
   AssetNFT.sol ERC-721 (F6-F8). RBAC is enforced on-chain via onlyRole modifiers.
 - apps/api/: config (done P0), db bootstrap + schema (done P0), then auth (F2), identity service (F3),
   asset service (F5), verification services (F12-F13), indexer (F11).
-- apps/web/: Next.js dashboard (F1), wallet connect (F2), admin/auditor views (F14-F15).
+- apps/web/: Vite + React + TypeScript + React Router dashboard shell (F1), wallet connect (F2), admin/auditor views (F14-F15).
 
 ## Privacy boundary
 On-chain: hashes, IDs, ownership/permission state, events, storage URIs.

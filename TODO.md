@@ -9,7 +9,7 @@ Working rules (from the roadmap doc):
 Legend: [ ] pending | [~] in progress | [x] done + tested + committed
 
 ## Phase 0 — Project Foundation  ✅ COMPLETE
-- [x] P0.1 Monorepo structure: `apps/web` (Next.js), `apps/api` (Node+TS), `contracts/` (Hardhat+OpenZeppelin), shared config
+- [x] P0.1 Monorepo structure: `apps/web` (Vite + React + TypeScript + React Router), `apps/api` (Node+TS), `contracts/` (Hardhat+OpenZeppelin), shared config
 - [x] P0.2 Environment/config system (.env handling, chain RPC settings, network IDs)
 - [x] P0.3 Database layer (SQLite via better-sqlite3 for dev/test; schema designed to port to PostgreSQL)
 - [x] P0.4 Smart-contract project compiles; base test harness runs green (Hardhat local network)
@@ -21,7 +21,7 @@ Legend: [ ] pending | [~] in progress | [x] done + tested + committed
 - [x] F1.2 Pages with mock data + shared domain types (`src/types/models.ts`); routes /, /login, /dashboard, /identities, /assets, /roles, /audit, /verify, /settings
 - [x] F1.3 Reusable components: Card, StatCard, Badge (+ status tone util), DataTable, PageHeader
 - [x] F1.4 Verification: lint 0 errors, tsc clean, production build OK, all 9 routes serve 200, no Phase-0 regressions (contracts 5/5, api 4/4)
-- Note: stack deviation — Vite+React+TS+react-router instead of Next.js (offline environment cannot reliably scaffold Next; same component model, easy to port). Wallet/auth buttons are disabled placeholders by design (F2 scope).
+- Stack note: frontend is **Vite + React + TypeScript + React Router** (offline environment could not reliably scaffold Next.js; same component model). This is the project's canonical frontend stack. Wallet/auth buttons are disabled placeholders by design (F2 scope).
 
 ## Feature 2 — Wallet Authentication
 - [ ] F2.1 Connect/disconnect wallet, account + network detection (MetaMask via window.ethereum / wagmi or ethers)
@@ -109,7 +109,7 @@ Legend: [ ] pending | [~] in progress | [x] done + tested + committed
 ## How I will work (per-feature loop)
 1. Inspect current repo state and previous commits.
 2. Implement ONLY the current to-do item.
-3. Compile + run automated tests (Hardhat tests for contracts, node --test/vitest for backend, next build for frontend).
+3. Compile + run automated tests (Hardhat tests for contracts, node --test/vitest for backend, `npm run web:build` — i.e. eslint + `tsc -b --noEmit` + `vite build` — for the Vite frontend).
 4. Manual/runtime smoke test where applicable (local Hardhat node + scripts).
 5. Deliver a written test report: files changed, tests run, results, known issues.
 6. `git commit` with message `feat(PX/FN): <summary>`.
