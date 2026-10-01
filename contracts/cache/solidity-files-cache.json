@@ -302,8 +302,8 @@
       ]
     },
     "/workspace/contracts/contracts/IdentityRegistry.sol": {
-      "lastModificationDate": 1790848764051,
-      "contentHash": "e431e5551f17c71fa903d5f57b77fa3f",
+      "lastModificationDate": 1790849452190,
+      "contentHash": "60b7f2678379d7aa4925aeb62e64a5e3",
       "sourceName": "contracts/IdentityRegistry.sol",
       "solcConfig": {
         "version": "0.8.24",
@@ -330,13 +330,54 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol"
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/access/IAccessControl.sol",
+        "./PlatformRoles.sol"
       ],
       "versionPragmas": [
         "^0.8.24"
       ],
       "artifacts": [
         "IdentityRegistry"
+      ]
+    },
+    "/workspace/contracts/contracts/AccessManager.sol": {
+      "lastModificationDate": 1790849461758,
+      "contentHash": "8cfd48c5a98254a3a03faf8012606038",
+      "sourceName": "contracts/AccessManager.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/AccessControl.sol",
+        "./PlatformRoles.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "AccessManager"
       ]
     }
   }

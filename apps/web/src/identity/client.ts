@@ -55,6 +55,15 @@ function keccakSelectorCache(sig: string): string {
   return s;
 }
 
+export function encodeCallPublic(fn: string, args: string[]): string {
+  return selector(fn) + args.map(addrWord).join('');
+}
+
+/// @dev uint256 argument word (for grant/revoke role hash args we pass raw 32-byte hex).
+export function bytes32Word(hexVal: string): string {
+  return pad(hexVal.replace(/^0x/, ''));
+}
+
 function encodeCall(fn: string, args: string[]): string {
   return selector(fn) + args.map(addrWord).join('');
 }

@@ -8,7 +8,7 @@ describe("IdentityRegistry (Feature 3)", function () {
   beforeEach(async function () {
     [owner, alice, bob, stranger] = await ethers.getSigners();
     const Registry = await ethers.getContractFactory("IdentityRegistry");
-    registry = await Registry.deploy(owner.address);
+    registry = await Registry.deploy(owner.address, ethers.ZeroAddress);
     await registry.waitForDeployment();
   });
 

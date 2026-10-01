@@ -1,6 +1,7 @@
-(empty)node_modules/
+# Hardhat / Foundry Artifacts
+contracts/artifacts/
+contracts/cache/node_modules/
 .next/
 dist/
 build/
 *.log
-node_modules/
